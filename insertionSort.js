@@ -8,7 +8,16 @@ let arr2 = [56, 98, 65, 3, 4, 58, 68, 90, 12, 34, 45];
 
 
 const insertionSort = function(arr) {
-
+    for(i = 0; i < arr.length; i++){
+        for(j = 0; j < i; j++){
+            if(arr[j] > arr[i]){
+                let currentJ = arr[j];
+                arr[j] = arr[i];
+                arr[i] = currentJ;
+            }
+        }
+    }
+    return arr;
 };
 
 console.log(insertionSort(arr1));
